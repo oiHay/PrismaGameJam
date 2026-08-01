@@ -665,7 +665,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 600123075258919542, guid: 5ccdb3e807d6ab5459ad1481100c861b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3377,7 +3377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 367020429}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2083017200
