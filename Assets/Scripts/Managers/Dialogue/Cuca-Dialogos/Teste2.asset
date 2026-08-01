@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
-  m_Name: AboutSelf
+  m_Name: Teste2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
-  displayText: Sobre Cuca
+  displayText: 
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation:
-  - speakerName: Testando1
-    text: Lorem ipsum dolor
-  - speakerName: AAA
-    text: Lorem ipsum dolor teste 2
+  conversation: []

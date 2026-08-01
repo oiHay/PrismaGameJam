@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d932a84622807324687471a70c2142cd, type: 3}
   m_Name: Cuca
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
-  suspectName: 
-  dialogueOptions: []
+  suspectName: Cuca
+  dialogueOptions:
+  - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
