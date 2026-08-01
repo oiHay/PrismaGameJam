@@ -4,6 +4,13 @@ using System.Linq;
 using UnityEngine;
 
 [Serializable]
+public class ItemReaction
+{
+    public ItemSO item;
+    public DialogueOptionSO reactionDialogue;
+}
+
+[Serializable]
 public class EmotionSprite
 {
     public Emotion emotion;
@@ -17,12 +24,14 @@ public class SuspectSO : ScriptableObject
     public List<EmotionSprite> portraits;
     public List<DialogueOptionSO> dialogueOptions;
 
+    [Header("Itens")]
+    public List<ItemReaction> itemReactions;
+    public DialogueOptionSO genericItemDialogue; // usado quando não há reação específica
+
     public Sprite GetSprite(Emotion emotion)
     {
         var match = portraits.Find(p => p.emotion == emotion);
-        if (match != null)
-            return match.sprite;
-
+        if (match != null) return match.sprite;
         Debug.LogWarning($"{suspectName} não tem sprite pra emoção {emotion}, usando Neutral.");
         return portraits.Find(p => p.emotion == Emotion.Neutral)?.sprite;
     }
@@ -38,5 +47,11 @@ public class SuspectSO : ScriptableObject
                 result.Add(opt);
         }
         return result;
+    }
+
+    public DialogueOptionSO GetReactionForItem(ItemSO item)
+    {
+        var match = itemReactions.FirstOrDefault(r => r.item == item);
+        return match != null ? match.reactionDialogue : genericItemDialogue;
     }
 }

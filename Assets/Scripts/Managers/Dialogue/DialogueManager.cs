@@ -146,4 +146,17 @@ public class DialogueManager : MonoBehaviour
         currentSuspect = suspect;
         ShowOptions();
     }
+
+    public void PresentItem(ItemSO item)
+    {
+        DialogueOptionSO reaction = currentSuspect.GetReactionForItem(item);
+
+        if (reaction == null)
+        {
+            Debug.LogWarning($"{currentSuspect.suspectName} não tem genericItemDialogue configurado!");
+            return;
+        }
+
+        StartConversation(reaction);
+    }
 }
