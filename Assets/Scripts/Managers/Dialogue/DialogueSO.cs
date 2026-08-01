@@ -16,5 +16,6 @@ public class DialogueOptionSO : ScriptableObject
 public class DialogueLineSO
 {
     public string speakerName;
+    public Emotion emotion;
     [TextArea] public string text;
 }

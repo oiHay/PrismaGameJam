@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
   m_Name: Teste2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
-  displayText: 
+  displayText: "TestandoOp\xE7ao"
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: teste
+    text: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  - speakerName: eu
+    text: bbbbbbbbbbbbbbbbbbbbbbb

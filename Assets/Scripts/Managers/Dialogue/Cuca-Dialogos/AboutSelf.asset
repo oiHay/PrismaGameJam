@@ -18,6 +18,8 @@ MonoBehaviour:
   flagsToSetOnComplete: []
   conversation:
   - speakerName: Testando1
+    emotion: 0
     text: Lorem ipsum dolor
   - speakerName: AAA
+    emotion: 0
     text: Lorem ipsum dolor teste 2

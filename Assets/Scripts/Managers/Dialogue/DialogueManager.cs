@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject conversationPanel;
     public TMP_Text speakerNameText;
     public TMP_Text dialogueText;
+    public Image portraitImage;
     public Button conversationClickArea; // botão invisível cobrindo a tela
 
     [Header("Configuração")]
@@ -30,9 +31,9 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("DialogueManager iniciou");
+        //Debug.Log("DialogueManager iniciou");
         conversationClickArea.onClick.AddListener(OnConversationClicked);
-        ShowOptions();
+        //ShowOptions();
     }
 
     // ---------- TELA DE OPÇÕES ----------
@@ -76,6 +77,7 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLineSO line = currentOption.conversation[currentLineIndex];
         speakerNameText.text = line.speakerName;
+        portraitImage.sprite = currentSuspect.GetSprite(line.emotion);
 
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
@@ -136,6 +138,12 @@ public class DialogueManager : MonoBehaviour
             InvestigationState.Instance.SetFlag(flag);
         }
 
+        ShowOptions();
+    }
+
+    public void SetSuspect(SuspectSO suspect)
+    {
+        currentSuspect = suspect;
         ShowOptions();
     }
 }

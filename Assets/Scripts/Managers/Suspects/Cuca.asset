@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Cuca
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
   suspectName: Cuca
+  portraits:
+  - emotion: 0
+    sprite: {fileID: 0}
+  - emotion: 1
+    sprite: {fileID: 0}
+  - emotion: 2
+    sprite: {fileID: 0}
   dialogueOptions:
   - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
+  - {fileID: 11400000, guid: 17e654f6aea66b94e9b2887e1a618fd6, type: 2}
