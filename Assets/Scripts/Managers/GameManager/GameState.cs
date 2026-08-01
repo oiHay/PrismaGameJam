@@ -2,6 +2,7 @@
 public enum GameState
 {
     Menu,
-    Playing,
-    Paused
+    Play,
+    Pause,
+    GameOver
 }
