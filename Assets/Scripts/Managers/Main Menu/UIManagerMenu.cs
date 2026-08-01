@@ -2,35 +2,58 @@ using UnityEngine;
 
 public class UIManagerMenu : MonoBehaviour
 {
-    private GameObject _currentPanel;
+    #region Debug
+
+    [SerializeField] private bool debugMode;
+
+    private void DebugMessage(string message)
+    {
+        if(debugMode)
+            Debug.Log(message);
+    }
+
+    #endregion
     
-    public void Play()
+    private GameObject _currentPanel; // variável que salva qual o painel aberto no momento
+    
+    public void Play() // Método para iniciar o jogo - click do botão no menu inicial
     {
         CustomSceneManager.LoadNextScene();
     }
-    
-    public void OpenPanel(GameObject panel)
+
+    public void Quit() // Método para sair do jogo
     {
-        if (panel == null) return;
+        DebugMessage("Botão de sair foi clicado");
         
-        if(_currentPanel != null)
-            _currentPanel.SetActive(false);
+        CustomSceneManager.QuitGame();
+        
+        #if UNITY_EDITOR // Serve para verificar se o método funciona
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+    
+    public void OpenPanel(GameObject panel) // Método para abrir o painel clicado
+    {
+        if (panel == null) return; // Se não tiver painel, não faz nada
+        
+        if(_currentPanel != null) // Se o painel já estiver aberto, o painel é fechado
+            _currentPanel.SetActive(false); 
 
         _currentPanel = panel;
-        _currentPanel.SetActive(true);
+        _currentPanel.SetActive(true); // Ativa o painel determinado
     }
 
-    public void CloseCurrentPanel()
+    public void CloseCurrentPanel() // Método para fechar o painel
     {
-        if(_currentPanel == null) return;
+        if(_currentPanel == null) return; // Se não tiver painel ativo, nada acontece
         
-        _currentPanel.SetActive(false);
-        _currentPanel = null;
+        _currentPanel.SetActive(false); // Fecha o painel
+        _currentPanel = null; // Variável do painel atual é "zerado"
     }
 
-    private void Update()
+    private void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) // Se o player clicar ESC, o painel é fechado, caso esteja aberto
         {
             CloseCurrentPanel();
         }
