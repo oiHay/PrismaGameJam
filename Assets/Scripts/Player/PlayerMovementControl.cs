@@ -20,6 +20,7 @@ public class PlayerMovementControl : MonoBehaviour
    private Coroutine _rechargeStamina;
 
    public event Action<float, float> OnStaminaChanged;
+   [HideInInspector] public Vector2 moveDir;
    
    private void Awake()
    {
@@ -41,6 +42,8 @@ public class PlayerMovementControl : MonoBehaviour
       if (!_isGameActive) return;
 
       _horizontalInput = Input.GetAxis("Horizontal");
+
+      moveDir = new Vector2(_horizontalInput, 0).normalized;
    }
 
    private void FixedUpdate()

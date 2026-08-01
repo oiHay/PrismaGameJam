@@ -1,0 +1,47 @@
+using System;
+using UnityEngine;
+
+public class PlayerFlashlisghtControl : MonoBehaviour
+{
+    [SerializeField] private GameObject lamparina;
+    [SerializeField] private KeyCode turnLightOn = KeyCode.X;
+    [SerializeField] private float offSetX;
+
+    private bool _isLightActive = false;
+    private PlayerMovementControl _movementControl;
+
+    private void Start()
+    {
+        lamparina.GetComponentInChildren<Transform>();
+        _movementControl = GetComponent<PlayerMovementControl>();
+    }
+
+    private void Update()
+    {
+        TurnOnLight();
+
+        if (_movementControl == null) return;
+
+        lamparina.transform.position = _movementControl.moveDir.x switch
+        {
+            > 0 => transform.position + new Vector3(offSetX, 0, 0),
+            < 0 => transform.position + new Vector3(-offSetX, 0, 0),
+            _   => transform.position + new Vector3(offSetX, 0, 0),
+        };
+    }
+    
+    private void TurnOnLight()
+    {
+        if (Input.GetKeyDown(turnLightOn) && !_isLightActive)
+        {
+            lamparina.SetActive(true);
+            _isLightActive = true;
+        }
+        else if (Input.GetKeyDown(turnLightOn) && _isLightActive)
+        {
+            lamparina.SetActive(false);
+            _isLightActive = false;
+        }
+            
+    }
+}

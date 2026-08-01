@@ -36,7 +36,7 @@ public class UIManagerMenu : MonoBehaviour
     {
         if (panel == null) return; // Se não tiver painel, não faz nada
         
-        if(_currentPanel != null) // Se o painel já estiver aberto, o painel é fechado
+        if(_currentPanel != null) // Se não tiver painel, o painel é fechado
             _currentPanel.SetActive(false); 
 
         _currentPanel = panel;
