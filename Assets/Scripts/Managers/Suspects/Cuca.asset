@@ -23,3 +23,5 @@ MonoBehaviour:
   dialogueOptions:
   - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
   - {fileID: 11400000, guid: 17e654f6aea66b94e9b2887e1a618fd6, type: 2}
+  itemReactions: []
+  genericItemDialogue: {fileID: 0}
