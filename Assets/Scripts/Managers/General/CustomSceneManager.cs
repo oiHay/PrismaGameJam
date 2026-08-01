@@ -15,7 +15,7 @@ public class CustomSceneManager : MonoBehaviour
 
     public static void MainMenu() // Método para direcionar o jogador ao Menu Inicial
     {
-        Resume();
+        Resume(GameState.Menu);
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -33,12 +33,14 @@ public class CustomSceneManager : MonoBehaviour
     {
         IsPaused = true;
         Time.timeScale = 0f;
+        GameManager.Instance.ChangeState(GameState.Pause);
     }
 
-    public static void Resume()
+    public static void Resume(GameState state=GameState.Play)
     {
         IsPaused = false;
         Time.timeScale = 1f;
+        GameManager.Instance.ChangeState(state);
     }
 
     #endregion
