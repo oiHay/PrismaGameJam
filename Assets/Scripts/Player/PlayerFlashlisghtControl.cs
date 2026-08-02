@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class PlayerFlashlisghtControl : MonoBehaviour
 {
+    [Header("Reference")]
+    [SerializeField] private PlayerDetectionSystem detectionSystem;
     [SerializeField] private GameObject lamparina;
+    
+    [Header("Parâmetros da Luz")]
     [SerializeField] private KeyCode turnLightOn = KeyCode.X;
     [SerializeField] private float offSetX;
 
@@ -36,11 +40,13 @@ public class PlayerFlashlisghtControl : MonoBehaviour
         {
             lamparina.SetActive(true);
             _isLightActive = true;
+            detectionSystem.FlashlightOn = true;
         }
         else if (Input.GetKeyDown(turnLightOn) && _isLightActive)
         {
             lamparina.SetActive(false);
             _isLightActive = false;
+            detectionSystem.FlashlightOn = false;
         }
             
     }

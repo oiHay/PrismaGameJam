@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovementControl : MonoBehaviour
 {
+   [Header("References")] [SerializeField]
+   private PlayerDetectionSystem detectionSystem;
+   
    [Header("Move Speed")]
    [SerializeField] private float moveSpeed;
    [SerializeField] private float sprintFactor = 1.5f;
@@ -42,14 +45,30 @@ public class PlayerMovementControl : MonoBehaviour
       if (!_isGameActive) return;
 
       _horizontalInput = Input.GetAxis("Horizontal");
-
       moveDir = new Vector2(_horizontalInput, 0).normalized;
+
+      UpdateDetectionMovementState();
    }
 
    private void FixedUpdate()
    {
       if (!_isGameActive) return;
       HandleMoveInput(_horizontalInput);
+   }
+
+   private void UpdateDetectionMovementState()
+   {
+      if (detectionSystem ==  null) return;
+
+      bool isMoving = Mathf.Abs(_horizontalInput) > 0.01f;
+      bool wantsRun = Input.GetKey(KeyCode.LeftShift) && _currentStamina > 0f;
+
+      if (isMoving && wantsRun)
+         detectionSystem.Movement = MovementState.Running;
+      else if (isMoving)
+         detectionSystem.Movement = MovementState.Walking;
+      else
+         detectionSystem.Movement = MovementState.Idle;
    }
 
    private void HandleMoveInput(float horizontalInput)
