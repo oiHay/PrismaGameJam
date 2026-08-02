@@ -18,6 +18,7 @@ public class PlayerMovementControl : MonoBehaviour
    private Rigidbody2D _playerRb;
    private float _horizontalInput;
    private bool _isGameActive;
+   private bool _isHidden;
    private float _currentStamina;
    private bool _isRunning;
    private Coroutine _rechargeStamina;
@@ -40,9 +41,21 @@ public class PlayerMovementControl : MonoBehaviour
       _isGameActive = state == GameState.Play;
    }
 
+   public void SetHidden(bool hidden)
+   {
+      _isHidden = hidden;
+
+      if (hidden)
+      {
+         _horizontalInput = 0f;
+         moveDir = Vector2.zero;
+         _playerRb.linearVelocity = Vector2.zero;
+      }
+   }
+
    private void Update()
    {
-      if (!_isGameActive) return;
+      if (!_isGameActive || _isHidden) return;
 
       _horizontalInput = Input.GetAxis("Horizontal");
       moveDir = new Vector2(_horizontalInput, 0).normalized;
@@ -73,6 +86,8 @@ public class PlayerMovementControl : MonoBehaviour
 
    private void HandleMoveInput(float horizontalInput)
    {
+      if (_isHidden) return;
+      
       _isRunning = Input.GetKey(KeyCode.LeftShift);
 
       if (_isRunning && _currentStamina > 0)

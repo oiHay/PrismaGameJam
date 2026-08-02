@@ -16,7 +16,6 @@ public class PlayerFlashlisghtControl : MonoBehaviour
 
     private void Start()
     {
-        lamparina.GetComponentInChildren<Transform>();
         _movementControl = GetComponent<PlayerMovementControl>();
     }
 

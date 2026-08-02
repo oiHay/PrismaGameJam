@@ -45,11 +45,11 @@ public class PlayerDetectionSystem : MonoBehaviour
         IsInGap = _gapOverlapCount > 0;
     }
 
-    private void UpdateDetection(float detection)
+    private void UpdateDetection(float dt)
     {
         if (IsHiding)
         {
-            DetectionMeter = Mathf.MoveTowards(DetectionMeter, 0f, decayRate * detection);
+            DetectionMeter = Mathf.MoveTowards(DetectionMeter, 0f, decayRate * dt);
             EvaluateState();
             OnMeterChanged?.Invoke(DetectionMeter);
             return;
@@ -63,14 +63,14 @@ public class PlayerDetectionSystem : MonoBehaviour
         bool flashlightContribution = FlashlightOn && IsInGap;
         if (flashlightContribution)
         {
-            delta += rateFlashlight * detection;
+            delta += rateFlashlight * dt;
             anySource = true;
         }
         
         // Andar em lacuna
         if (Movement == MovementState.Walking && IsInGap)
         {
-            delta += rateWalk * detection;
+            delta += rateWalk * dt;
             anySource = true;
             onlyWalkGap = !flashlightContribution;
         }
@@ -78,7 +78,7 @@ public class PlayerDetectionSystem : MonoBehaviour
         // Corre
         if (Movement == MovementState.Running)
         {
-            delta += IsInGap ? rateRunGap * detection : rateRun * detection;
+            delta += IsInGap ? rateRunGap * dt : rateRun * dt;
             anySource = true;
         }
 
@@ -89,6 +89,8 @@ public class PlayerDetectionSystem : MonoBehaviour
             if (onlyWalkGap)
                 DetectionMeter = Mathf.Min(DetectionMeter, alertCap);
         }
+        else
+            DetectionMeter = Mathf.MoveTowards(DetectionMeter, 0f, decayRate * dt);
 
         DetectionMeter = Mathf.Clamp(DetectionMeter, 0f, 100f);
         EvaluateState();

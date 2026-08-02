@@ -2195,6 +2195,8 @@ GameObject:
   - component: {fileID: 1686893384}
   - component: {fileID: 1686893392}
   - component: {fileID: 1686893390}
+  - component: {fileID: 1686893393}
+  - component: {fileID: 1686893394}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2214,6 +2216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4415e309c296a428cbf72edc01885d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementControll
+  detectionSystem: {fileID: 1686893393}
   moveSpeed: 15
   sprintFactor: 10
   maxStamina: 100
@@ -2444,9 +2447,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e9c4d7ba0873c4d800ec4dcf0ade33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFlashlisghtControl
+  detectionSystem: {fileID: 1686893393}
   lamparina: {fileID: 102616944}
   turnLightOn: 120
   offSetX: 1.75
+--- !u!114 &1686893393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686893383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b223f661a45cd2479db1c7042d21343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDetectionSystem
+  safeToAlertThreshold: 30
+  alertToSafeThreshold: 20
+  alertToDangerThreshold: 70
+  dangerToAlertThreshold: 55
+  alertCap: 69.9
+  rateFlashlight: 15
+  rateWalk: 10
+  rateRun: 12
+  rateRunGap: 40
+  decayRate: 18
+--- !u!114 &1686893394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686893383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b34533261006864da383067552d10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHideControl
+  detectionSystem: {fileID: 1686893393}
+  movementControl: {fileID: 1686893384}
+  hideKey: 306
 --- !u!1 &1792000087
 GameObject:
   m_ObjectHideFlags: 0
