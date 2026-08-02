@@ -44,4 +44,18 @@ public class CustomSceneManager : MonoBehaviour
     }
 
     #endregion
+
+    #region GameScene
+
+    public static void GoToAssembleia()
+    {
+        SceneManager.LoadScene("Assembleia");
+    }
+
+    public static void GoToScroller()
+    {
+        // SceneManager.LoadScene("Botar nome da cena quando tiver");
+    }
+
+    #endregion
 }
