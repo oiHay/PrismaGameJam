@@ -16,4 +16,18 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: O que tem isso? Hm? Ah, dentes...
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Posso ter usado isso pra incentivar algu\xE9m a ir mais cedo pra cama
+      receber a visita de uma certa fada."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Assim n\xE3o iria precisar assustar ningu\xE9m que n\xE3o quisesse ir
+      pra cama no dia de hoje, sabe?"
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Hm, pela sua cara acho que n\xE3o gostou da piada."

@@ -16,4 +16,14 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "Nesse vai e vem \xE9 bem poss\xEDvel que qualquer um tenha deixado as
+      marcas dos seus p\xE9zinhos por a\xED"
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "Menos eu, \xE9 claro!"
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "Olha s\xF3 o tamanho dos p\xE9s do pai, haha!"

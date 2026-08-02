@@ -16,4 +16,17 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: Cuca
+    emotion: 0
+    text: Ha! Isso me lembra de quando aquela Cabra quebrou um dos seus e veio me
+      pedir pra arrumar.
+  - speakerName: Cuca
+    emotion: 0
+    text: "Queria faze-la implorar, mas ela me fez uma proposta irrecus\xE1vel!"
+  - speakerName: Cuca
+    emotion: 0
+    text: "Por que n\xE3o deixa essa \"pista\" com a Tia Cuca?"
+  - speakerName: Cuca
+    emotion: 0
+    text: "\xC9 um item muito poderoso para conjurar alguns feiti\xE7os!"

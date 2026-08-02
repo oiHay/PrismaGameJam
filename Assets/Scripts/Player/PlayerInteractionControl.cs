@@ -33,7 +33,9 @@ public class PlayerInteractionControl : MonoBehaviour
     {
         if (Input.GetKeyDown(interactionButton) && _isClueOnRange)
         {
-            DebugMessage("pista maneira");
+            //Precisamos passar um ItemSO nesse AddItem.
+            //PlayerInventory.Instance.AddItem(other);
+            DebugMessage("Pista maneira");
         }
     }
 

@@ -16,4 +16,19 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Quem deixou isso pra tr\xE1s foi muito burro."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: Oi? Acha que fui eu?
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Ah, me desculpe. Acho que voc\xEA n\xE3o percebeu."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Meus p\xE9s n\xE3o tem esse formato."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: Talvez sejam da Cabra.

@@ -23,5 +23,11 @@ MonoBehaviour:
   dialogueOptions:
   - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
   - {fileID: 11400000, guid: abf81dcf9ad6cc84ab006846221e1e94, type: 2}
-  itemReactions: []
+  itemReactions:
+  - item: {fileID: 11400000, guid: a87b8d2f002213044b40f2839ece4d76, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 5a804dbd0f715304f9e626d99e389135, type: 2}
+  - item: {fileID: 11400000, guid: dc215b0e03f85284793ae41523a5e9cd, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 11e82843d0f0f9348ab9ab308de7c5b6, type: 2}
+  - item: {fileID: 11400000, guid: 00529f8f87f19ae41aeffff6233d757c, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: f9b8da962ea1f9c4c8700560ac939b95, type: 2}
   genericItemDialogue: {fileID: 0}

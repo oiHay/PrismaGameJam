@@ -15,5 +15,13 @@ MonoBehaviour:
   suspectName: Boi da Cara Preta
   portraits: []
   dialogueOptions: []
-  itemReactions: []
+  itemReactions:
+  - item: {fileID: 11400000, guid: 19fc5a623721b2d40bdec07fa5249114, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 9be41193862863c45859449c390f0e9a, type: 2}
+  - item: {fileID: 11400000, guid: dc215b0e03f85284793ae41523a5e9cd, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: f94ef46799fa405429b378fc82d335fc, type: 2}
+  - item: {fileID: 11400000, guid: fe7bd8c1e15b6a84a8f719ebe0ddf855, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 44d82754369febf40952f49bd032c09c, type: 2}
+  - item: {fileID: 11400000, guid: 38686e2b57da3bf40a64b01f035140eb, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 2a631a4e92d025446a5bff92518eda2e, type: 2}
   genericItemDialogue: {fileID: 0}

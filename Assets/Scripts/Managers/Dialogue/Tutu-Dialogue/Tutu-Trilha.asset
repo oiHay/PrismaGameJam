@@ -16,4 +16,16 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Eu sou do tipo que gosta de se esconder pelas casas daqueles que n\xE3o
+      gostam de ir pra cama cedo."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Se essa trilha levar a algum lugar interessante, \xE9 melhor Matinta ficar
+      longe do meu caminho."
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Ela gosta de assombrar casas \xE0 noite e eu detesto crian\xE7as acordadas
+      at\xE9 tarde!"

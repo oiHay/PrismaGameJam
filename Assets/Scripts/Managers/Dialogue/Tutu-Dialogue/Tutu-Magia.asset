@@ -16,4 +16,10 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: "Ah, eu n\xE3o uso essas coiss n\xE3o. Muito trabalhoso!"
+  - speakerName: "Tutu Maramb\xE1"
+    emotion: 0
+    text: Cuca e Matinta possuem mais afinidade com isso.

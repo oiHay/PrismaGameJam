@@ -16,4 +16,15 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "Minha vis\xE3o \xE9 perfeita, mesmo que eu precise fazer careta para as
+      crian\xE7as, ta ok!?"
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "N\xE3o estou for\xE7ando minhas vistas, nem nada do tipo."
+  - speakerName: Boi da Cara Preta
+    emotion: 0
+    text: "Os \xFAnicos que parecem n\xE3o enxergar direito aqui s\xE3o a cabra e
+      aquela velha."

@@ -16,4 +16,21 @@ MonoBehaviour:
   requiredFlags: []
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation: []
+  conversation:
+  - speakerName: Cuca
+    emotion: 0
+    text: Uma oferenda pra mim, meu bem?
+  - speakerName: Cuca
+    emotion: 0
+    text: "N\xE3o? Que pena... N\xF3s da velha guarda sempre gostamos de ganhar uma
+      coisinha ou outra."
+  - speakerName: Cuca
+    emotion: 0
+    text: "Nos estimula a n\xE3o... fazer estragos t\xE3o grandes."
+  - speakerName: Cuca
+    emotion: 0
+    text: "O Boi e a Matinta s\xE3o mestres em conseguir cigarros das pessoas, tenho
+      que admitir."
+  - speakerName: Cuca
+    emotion: 0
+    text: Eu, por outro lado, sou mais seletiva. Prefiro fazer os meus.
