@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     public Image portraitImage;
     public Button conversationClickArea; // botão invisível cobrindo a tela
 
+    [Header("UI - Suspeitos")]
+    public GameObject suspectsParent;
+
     [Header("Configuração")]
     public float charactersPerSecond = 40f;
 
@@ -41,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     //Destroi e recria toda vez, já atualizado com novas opçoes (se houverem)
     public void ShowOptions()
     {
+        suspectsParent.SetActive(false);
         conversationPanel.SetActive(false);
         optionsPanel.SetActive(true);
 
@@ -158,5 +162,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         StartConversation(reaction);
+    }
+
+    public void ReturnToSuspects()
+    {   
+        optionsPanel.SetActive(false);
+        conversationPanel.SetActive(false);
+        suspectsParent.SetActive(true);
     }
 }

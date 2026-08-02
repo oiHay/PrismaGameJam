@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
-  m_Name: Teste2
+  m_Name: TesteFlags
   m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
-  displayText: "TestandoOp\xE7ao"
-  requiredFlags: []
+  displayText: 
+  requiredFlags:
+  - '"testando_flags"'
   blockedByFlags: []
   flagsToSetOnComplete: []
-  conversation:
-  - speakerName: teste
-    text: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  - speakerName: eu
-    text: bbbbbbbbbbbbbbbbbbbbbbb
+  conversation: []

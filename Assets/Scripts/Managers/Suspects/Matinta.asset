@@ -10,18 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d932a84622807324687471a70c2142cd, type: 3}
-  m_Name: Cuca
+  m_Name: Matinta
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
-  suspectName: Cuca
-  portraits:
-  - emotion: 0
-    sprite: {fileID: 0}
-  - emotion: 1
-    sprite: {fileID: 0}
-  - emotion: 2
-    sprite: {fileID: 0}
-  dialogueOptions:
-  - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
-  - {fileID: 11400000, guid: abf81dcf9ad6cc84ab006846221e1e94, type: 2}
+  suspectName: Matinta Pereira
+  portraits: []
+  dialogueOptions: []
   itemReactions: []
   genericItemDialogue: {fileID: 0}
