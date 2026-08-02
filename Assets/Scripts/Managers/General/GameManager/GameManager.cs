@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField] private GameStateEventSO gameStateEventSo; // Referencia direta ao GameStateEventSO, permite que o código saiba qual é o estado atual do jogo e que o mesmo possa ser alterado
-    [SerializeField] private GameState initialState;
     
     public static GameManager Instance { get; private set; }
 
@@ -29,11 +28,6 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
-        ChangeState(initialState);
     }
 
     public void ChangeState(GameState newState) // público para permitir que outros scripts alterem o estado
