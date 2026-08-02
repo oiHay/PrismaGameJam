@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
+  m_Name: Cabra-Cabelo
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
+  displayText: 
+  requiredFlags: []
+  blockedByFlags: []
+  flagsToSetOnComplete: []
+  conversation:
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "Hehehehe! Parece que algu\xE9m foi arrastado pelo cabelo."
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: Eu sempre preferi o bom e velho saco para carregar os pobres coitados
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "Mas sei que alguns de n\xF3s s\xE3o um pouco mais... brutos em suas empreitadas."
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "Principalmente o Tutu! Aquele l\xE1 parece bem mais cruel do que parece."

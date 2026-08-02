@@ -15,5 +15,13 @@ MonoBehaviour:
   suspectName: Cabra Cabriola
   portraits: []
   dialogueOptions: []
-  itemReactions: []
+  itemReactions:
+  - item: {fileID: 11400000, guid: 19fc5a623721b2d40bdec07fa5249114, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 8c72465ac5dbb894fb47023c3f98536b, type: 2}
+  - item: {fileID: 11400000, guid: fe7bd8c1e15b6a84a8f719ebe0ddf855, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 0249bbf7f2fb863439c897cb4e6b6ef1, type: 2}
+  - item: {fileID: 11400000, guid: a87b8d2f002213044b40f2839ece4d76, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: d4ff3e2483f673a4787df349ecd47c8d, type: 2}
+  - item: {fileID: 11400000, guid: 8de81569967cc264e888f83e06e90d6d, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 6a6d2e537b51c0a429422005571f4bbb, type: 2}
   genericItemDialogue: {fileID: 0}

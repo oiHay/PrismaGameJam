@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
+  m_Name: Cabra-Cigarro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
+  displayText: 
+  requiredFlags: []
+  blockedByFlags: []
+  flagsToSetOnComplete: []
+  conversation:
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "B\xE9\xE9\xE9rgh!"
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "N\xE3o suporto o cheiro dessas coisas!"
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: Sempre evito ficar perto da Cuca, da Matinta e do Boi...
+  - speakerName: Cabra Cabriola
+    emotion: 0
+    text: "Se bem que ele disse que estava tentando parar com esse h\xE1bito. Ser\xE1
+      mesmo?"
