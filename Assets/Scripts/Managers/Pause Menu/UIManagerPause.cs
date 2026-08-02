@@ -13,8 +13,10 @@ public class UIManagerPause : MonoBehaviour
     }
 
     #endregion
-
+    
+    [Header("Panels")]
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject exitConfirmationPanel;
 
     private void Update()
     {
@@ -41,5 +43,11 @@ public class UIManagerPause : MonoBehaviour
 
         CustomSceneManager.Resume();
         pauseUI.SetActive(false);
+        exitConfirmationPanel.SetActive(false);
+    }
+
+    public void TryQuit()
+    {
+        exitConfirmationPanel.SetActive(true);
     }
 }
