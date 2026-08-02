@@ -65,7 +65,7 @@ public class PlayerMovementControl : MonoBehaviour
 
    private void FixedUpdate()
    {
-      if (!_isGameActive) return;
+      if (!_isGameActive || _isHidden) return;
       HandleMoveInput(_horizontalInput);
    }
 
@@ -86,8 +86,6 @@ public class PlayerMovementControl : MonoBehaviour
 
    private void HandleMoveInput(float horizontalInput)
    {
-      if (_isHidden) return;
-      
       _isRunning = Input.GetKey(KeyCode.LeftShift);
 
       if (_isRunning && _currentStamina > 0)

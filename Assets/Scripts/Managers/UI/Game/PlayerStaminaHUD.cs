@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHUDManager : MonoBehaviour
+public class PlayerStaminaHUD : MonoBehaviour
 {
     [SerializeField] private PlayerMovementControl playerControl;
     [SerializeField] private Slider staminaBar;
