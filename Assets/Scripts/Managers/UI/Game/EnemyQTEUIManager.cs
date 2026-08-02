@@ -12,23 +12,28 @@ public class EnemyQTEUIManager : MonoBehaviour
     private void OnEnable()
     {
         EnemyQTEManager.OnQTEStarted += Show;
-        EnemyQTEManager.OnQTESuccess += Hide;
-        EnemyQTEManager.OnQTEFail += Hide;
+        EnemyQTEManager.OnQTEFinished += Hide;
+        EnemyArea.OnPlayerLeftArea += Hide;
     }
 
     private void OnDisable()
     {
         EnemyQTEManager.OnQTEStarted -= Show;
-        EnemyQTEManager.OnQTESuccess -= Hide;
-        EnemyQTEManager.OnQTEFail -= Hide;
+        EnemyQTEManager.OnQTEFinished -= Hide;
+        EnemyArea.OnPlayerLeftArea -= Hide;
     }
 
-    private void Show()
+    private void Show(EnemyArea enemyArea)
     {
         qteUIObject.SetActive(true);
     }
 
-    private void Hide()
+    private void Hide(EnemyArea enemyArea, bool success)
+    {
+        qteUIObject.SetActive(false);
+    }
+
+        private void Hide()
     {
         qteUIObject.SetActive(false);
     }

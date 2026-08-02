@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyAreaData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAreaData
   key: 304
-  reactionTime: 2
+  reactionTime: 5
+  attackChance: 0.502

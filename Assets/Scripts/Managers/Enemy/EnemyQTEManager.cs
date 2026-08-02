@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class EnemyQTEManager : MonoBehaviour
 {
-    public static event Action OnQTEStarted;
-    public static event Action OnQTESuccess;
-    public static event Action OnQTEFail;
+    public static event Action<EnemyArea> OnQTEStarted;
+    public static event Action<EnemyArea, bool> OnQTEFinished;
 
     private bool running;
 
@@ -20,7 +19,7 @@ public class EnemyQTEManager : MonoBehaviour
         EnemyArea.OnPlayerDetected -= StartQTE;
     }
 
-    private void StartQTE(EnemyAreaData enemyArea)
+    private void StartQTE(EnemyArea enemyArea)
     {
         if (running)
             return;
@@ -28,31 +27,31 @@ public class EnemyQTEManager : MonoBehaviour
         StartCoroutine(RunQTE(enemyArea));
     }
 
-    private IEnumerator RunQTE(EnemyAreaData enemyArea)
+    private IEnumerator RunQTE(EnemyArea enemyArea)
     {
         running = true;
 
-        OnQTEStarted?.Invoke();
+        OnQTEStarted?.Invoke(enemyArea);
 
-        Debug.Log($"Pressione {enemyArea.key}");
+        Debug.Log($"Pressione {enemyArea.Data.key}");
 
         float timer = 0f;
+        bool success = false;
 
-        while (timer < enemyArea.reactionTime)
+        while (timer < enemyArea.Data.reactionTime)
         {
-            if (Input.GetKeyDown(enemyArea.key))
+            if (Input.GetKeyDown(enemyArea.Data.key))
             {
-                OnQTESuccess?.Invoke();
-
-                running = false;
-                yield break;
+                success = true;
+                Debug.Log($"Fugiu");
             }
 
             timer += Time.deltaTime;
             yield return null;
         }
 
-        OnQTEFail?.Invoke();
+        Debug.Log($"Morreu");
+        OnQTEFinished?.Invoke(enemyArea, success);
 
         running = false;
     }

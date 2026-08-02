@@ -1,32 +1,79 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyArea : MonoBehaviour
 {
-    public static event Action<EnemyAreaData> OnPlayerDetected;
-
+    public static event Action<EnemyArea> OnPlayerDetected;
+    public static event Action OnPlayerLeftArea;
     [SerializeField] private EnemyAreaData enemyArea;
 
+    [Header("Ataque")]
+    [SerializeField] private GameObject attackSprite;
+    [SerializeField] private float attackDuration = 0.3f;
+
     private bool triggered;
+
+    private void Awake()
+    {
+        attackSprite.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        EnemyQTEManager.OnQTEFinished += OnQTEFinished;
+    }
+
+    private void OnDisable()
+    {
+        EnemyQTEManager.OnQTEFinished -= OnQTEFinished;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (triggered)
             return;
 
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("EnemyDetect"))
             return;
 
         triggered = true;
 
-        OnPlayerDetected?.Invoke(enemyArea);
+        OnPlayerDetected?.Invoke(this);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("EnemyDetect"))
+
             return;
 
         triggered = false;
+        OnPlayerLeftArea?.Invoke();
     }
+
+    private void OnQTEFinished(EnemyArea area, bool success)
+    {
+        // Ignora eventos de outros inimigos
+        if (area != this)
+            return;
+
+        StartCoroutine(Attack(success));
+    }
+
+    private IEnumerator Attack(bool success)
+    {
+        attackSprite.SetActive(true);
+
+        yield return new WaitForSeconds(attackDuration);
+
+        attackSprite.SetActive(false);
+
+        if (!success)
+        {
+            // Aqui chama o Game Over
+        }
+    }
+
+    public EnemyAreaData Data => enemyArea;
 }
