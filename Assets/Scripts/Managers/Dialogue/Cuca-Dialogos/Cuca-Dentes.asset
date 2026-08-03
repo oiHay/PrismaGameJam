@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
-  m_Name: Cuca-Chifre
+  m_Name: Cuca-Dentes
   m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
   displayText: 
   requiredFlags: []
@@ -19,15 +19,14 @@ MonoBehaviour:
   conversation:
   - speakerName: Cuca
     emotion: 0
-    text: "H\xE1! Isso me lembra de quando aquela Cabra quebrou um dos seus e veio
-      me pedir pra arrumar."
+    text: "Ora, ora... Presas de Boitat\xE1! S\xE3o belas, admito, mas s\xF3 servem
+      pra fazer uns fogos de artif\xEDcio m\xE1gicos. "
   - speakerName: Cuca
-    emotion: 1
-    text: "Queria v\xEA-la implorando, mas ela me fez uma proposta irrecus\xE1vel..."
+    emotion: 0
+    text: ' Truquezinhos de feiticeiro amador...'
   - speakerName: Cuca
     emotion: 0
     text: "Por que n\xE3o deixa essa \"pista\" com a Tia Cuca?"
   - speakerName: Cuca
     emotion: 0
-    text: "Quando terminar de brincar de detetive, que tal deixar esse chifre com
-      a tia Cuca, hein?! Daria pra fazer umas ilus\xF5es poderos\xEDssimas!"
+    text: "... mas um show de luzes sempre chama a aten\xE7\xE3o das criancinhas!"

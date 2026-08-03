@@ -18,15 +18,15 @@ MonoBehaviour:
   flagsToSetOnComplete: []
   conversation:
   - speakerName: Cuca
-    emotion: 0
-    text: "Ah! Minha \xE1rea de expertise!"
+    emotion: 1
+    text: "Ah! Minha \xE1rea de expertise! Embora a Matinta viva se achando..."
   - speakerName: Cuca
     emotion: 0
-    text: "Querendo ou n\xE3o, todos n\xF3s sabemos uma coisa ou outra de feiti\xE7aria,
-      mas ningu\xE9m se compara a mim!"
+    text: "T\xE3o iludida, tadinha. Ela n\xE3o engraxa o meu salto alto! Hu hu hu..."
   - speakerName: Cuca
     emotion: 0
     text: "Bem, houve uma \xE9poca em que o Boi era p\xE1reo para as minhas magias..."
   - speakerName: Cuca
-    emotion: 0
-    text: Sim! AQUELE Boi, acredita? Mas hoje ele prefere sua "fama".
+    emotion: 2
+    text: "E a Cabra, ent\xE3o? Nem magia ela usa! Como que algu\xE9m VIVE desse
+      jeito?!"

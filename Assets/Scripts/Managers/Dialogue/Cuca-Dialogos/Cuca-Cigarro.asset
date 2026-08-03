@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 748f61b45ecb64b4aa9018052adecd58, type: 3}
-  m_Name: Cuca-Cigarros
+  m_Name: Cuca-Cigarro
   m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionSO
   displayText: 
   requiredFlags: []
@@ -18,7 +18,7 @@ MonoBehaviour:
   flagsToSetOnComplete: []
   conversation:
   - speakerName: Cuca
-    emotion: 0
+    emotion: 2
     text: Uma oferenda pra mim, meu bem?
   - speakerName: Cuca
     emotion: 0
@@ -28,9 +28,9 @@ MonoBehaviour:
     emotion: 0
     text: "Nos estimula a n\xE3o... fazer estragos t\xE3o grandes."
   - speakerName: Cuca
-    emotion: 0
-    text: "O Boi e a Matinta s\xE3o mestres em conseguir cigarros das pessoas, tenho
-      que admitir."
+    emotion: 1
+    text: "Mas quando se trata de filar cigarro dos outros, tenho que admitir...
+      o Boi e a Matinta s\xE3o os melhores."
   - speakerName: Cuca
     emotion: 0
     text: Eu, por outro lado, sou mais seletiva. Prefiro fazer os meus.
