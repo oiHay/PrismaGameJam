@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Tufo de cabelo
   icon: {fileID: 0}
-  description: Cabelo cabelo cabelo cabelo cabelo cabelo cabelo cabelo cabelo cabelo
-    cabelo cabelo
+  description: "Tufo da mesma cor que o cabelo da v\xEDtima. Foi encontrado pr\xF3ximo
+    ao rastro em dire\xE7\xE3o \xE0 mata."

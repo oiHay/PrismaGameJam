@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Cigarro
   icon: {fileID: 0}
-  description: fumante fumante fumante fumante fumante fumante fumante fumante
+  description: "Ma\xE7o de cigarro aberto e amassado."
