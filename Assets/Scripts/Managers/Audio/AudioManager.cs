@@ -78,4 +78,30 @@ public class AudioManager : MonoBehaviour
         return Mathf.Log10(Mathf.Max(linear, 0.0001f)) * 20f;
     }
 
+    public void PlayMusic(AudioClip clip)
+    {
+        if (clip == null || musicSource.clip == clip) return;
+
+        musicSource.clip = clip;
+        musicSource.Play();
+    }
+
+    public void StopMusico()
+    {
+        musicSource.Stop();
+        musicSource.clip = null;
+    }
+    
+    public void PlaySfx(AudioClip clip, float volumeScale = 1f)
+    {
+        if (clip == null) return;
+
+        sfxSource.PlayOneShot(clip, volumeScale);
+    }
+    
+    public static void PlaySound(AudioClip clip)
+    {
+        if (Instance != null)
+            Instance.PlaySfx(clip);
+    }
 }
