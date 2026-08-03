@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8949d75eebbb23544a3fdd032fd796c1
+guid: d47244d73a859dc40a505b507596899a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6325802395937921055
-    second: Losango_Interno_0
+      213: -3887867678728469070
+    second: 9Bichos_HUD_Screen_ConFundo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Losango_Interno_0
+      name: 9Bichos_HUD_Screen_ConFundo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 40
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f18d13973c3c9c750800000000000000
-      internalID: 6325802395937921055
+      spriteID: 2b5caabe1f48b0ac0800000000000000
+      internalID: -3887867678728469070
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Losango_Interno_0: 6325802395937921055
+      9Bichos_HUD_Screen_ConFundo_0: -3887867678728469070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

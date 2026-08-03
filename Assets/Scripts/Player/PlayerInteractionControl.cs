@@ -18,6 +18,8 @@ public class PlayerInteractionControl : MonoBehaviour
     [SerializeField] private KeyCode interactionButton = KeyCode.E;
 
     private bool _isClueOnRange;
+
+    public event Action<bool> OnPistaRangeChanged;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +28,7 @@ public class PlayerInteractionControl : MonoBehaviour
             DebugMessage("pista dentro do range");
 
             _isClueOnRange = true;
+            OnPistaRangeChanged?.Invoke(true);
         }
     }
 
@@ -45,6 +48,7 @@ public class PlayerInteractionControl : MonoBehaviour
         {
             DebugMessage("pista saiu do range");
             _isClueOnRange = false;
+            OnPistaRangeChanged?.Invoke(false);
         }
     }
 }
