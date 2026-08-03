@@ -19,6 +19,7 @@ public class PlayerDetectionSystem : MonoBehaviour
     [SerializeField] private float rateWalk = 10f;
     [SerializeField] private float rateRun = 12f;
     [SerializeField] private float rateRunGap = 40f;
+    [SerializeField] private float rateEnemyAreaBase = 8f;
     [SerializeField] private float decayRate = 18f;
 
     public float DetectionMeter { get; private set; } = 0f;
@@ -57,28 +58,36 @@ public class PlayerDetectionSystem : MonoBehaviour
 
         float delta = 0f;
         bool anySource = false;
-        bool onlyWalkGap = false;
-        
-        // Lanterna em lacuna
-        bool flashlightContribution = FlashlightOn && IsInGap;
-        if (flashlightContribution)
+
+        bool flashlightActive = FlashlightOn;
+        bool walkingActive = Movement == MovementState.Walking;
+        bool runningActive = Movement == MovementState.Running;
+
+        // Lanterna ligada sempre conta
+        if (flashlightActive)
         {
             delta += rateFlashlight * dt;
             anySource = true;
         }
-        
-        // Andar em lacuna
-        if (Movement == MovementState.Walking && IsInGap)
+
+        // Andar sempre conta
+        if (walkingActive)
         {
             delta += rateWalk * dt;
             anySource = true;
-            onlyWalkGap = !flashlightContribution;
         }
-        
-        // Corre
-        if (Movement == MovementState.Running)
+
+        // Correr sempre conta, e ainda mais dentro da área do inimigo
+        if (runningActive)
         {
-            delta += IsInGap ? rateRunGap * dt : rateRun * dt;
+            delta += (IsInGap ? rateRunGap : rateRun) * dt;
+            anySource = true;
+        }
+
+        // Estar na área de ataque do inimigo soma sozinho, mesmo parado e sem lanterna
+        if (IsInGap)
+        {
+            delta += rateEnemyAreaBase * dt;
             anySource = true;
         }
 
@@ -86,7 +95,9 @@ public class PlayerDetectionSystem : MonoBehaviour
         {
             DetectionMeter += delta;
 
-            if (onlyWalkGap)
+            // Só andar, sem lanterna, correr ou área de risco: segura antes do Danger
+            bool onlySoftWalk = walkingActive && !flashlightActive && !runningActive && !IsInGap;
+            if (onlySoftWalk)
                 DetectionMeter = Mathf.Min(DetectionMeter, alertCap);
         }
         else

@@ -27,6 +27,19 @@ public class UIManagerPause : MonoBehaviour
 
     private bool _isInventoryOpen;
     
+    public static UIManagerPause Instance { get; private set; }
+    
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
+    }
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cigarro
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Cigarro
-  icon: {fileID: 0}
+  icon: {fileID: -1553849875758031771, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "Ma\xE7o de cigarro aberto e amassado."

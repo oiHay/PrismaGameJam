@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class EnemyQTEManager : MonoBehaviour
 {
-    public static event Action<EnemyArea> OnQTEStarted;
-    public static event Action<EnemyArea, bool> OnQTEFinished;
+    [Header("Detecção")] [SerializeField] private PlayerDetectionSystem detectionSystem;
+    
+    public static event Action<EnemyArea> OnQteStarted;
+    public static event Action<EnemyArea, bool> OnQteFinished;
 
-    private bool running;
+    private bool _running;
 
     private void OnEnable()
     {
-        EnemyArea.OnPlayerDetected += StartQTE;
+        EnemyArea.OnPlayerDetected += StartQte;
     }
 
     private void OnDisable()
     {
-        EnemyArea.OnPlayerDetected -= StartQTE;
+        EnemyArea.OnPlayerDetected -= StartQte;
     }
 
-    private void StartQTE(EnemyArea enemyArea)
+    private void StartQte(EnemyArea enemyArea)
     {
-        if (running)
+        if (_running)
             return;
 
-        StartCoroutine(RunQTE(enemyArea));
+        if (UnityEngine.Random.value > GetQteChance(enemyArea.Data))
+        {
+            OnQteFinished?.Invoke(enemyArea, true);
+            return;
+        }
+        
+        StartCoroutine(RunQte(enemyArea));
+    }
+    
+    private float GetQteChance(EnemyAreaData data)
+    {
+        if (detectionSystem == null)
+            return data.attackChance;
+
+        float detectionFactor = detectionSystem.DetectionMeter / 100f;
+        return Mathf.Clamp01(data.attackChance * detectionFactor);
     }
 
-    private IEnumerator RunQTE(EnemyArea enemyArea)
+    private IEnumerator RunQte(EnemyArea enemyArea)
     {
-        running = true;
+        _running = true;
 
-        OnQTEStarted?.Invoke(enemyArea);
+        OnQteStarted?.Invoke(enemyArea);
 
         Debug.Log($"Pressione {enemyArea.Data.key}");
 
@@ -51,8 +68,8 @@ public class EnemyQTEManager : MonoBehaviour
         }
 
         Debug.Log($"Morreu");
-        OnQTEFinished?.Invoke(enemyArea, success);
+        OnQteFinished?.Invoke(enemyArea, success);
 
-        running = false;
+        _running = false;
     }
 }

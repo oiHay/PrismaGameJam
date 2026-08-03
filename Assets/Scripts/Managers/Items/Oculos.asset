@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Oculos
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Oculos
-  icon: {fileID: 0}
+  icon: {fileID: -1412937018682313857, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "Pequeno peda\xE7o de vidro, levemente c\xF4ncavo. Trincado, mas sem
     manchas de sangue. "

@@ -11,15 +11,15 @@ public class EnemyQTEUIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EnemyQTEManager.OnQTEStarted += Show;
-        EnemyQTEManager.OnQTEFinished += Hide;
+        EnemyQTEManager.OnQteStarted += Show;
+        EnemyQTEManager.OnQteFinished += Hide;
         EnemyArea.OnPlayerLeftArea += Hide;
     }
 
     private void OnDisable()
     {
-        EnemyQTEManager.OnQTEStarted -= Show;
-        EnemyQTEManager.OnQTEFinished -= Hide;
+        EnemyQTEManager.OnQteStarted -= Show;
+        EnemyQTEManager.OnQteFinished -= Hide;
         EnemyArea.OnPlayerLeftArea -= Hide;
     }
 

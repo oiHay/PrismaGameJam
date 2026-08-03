@@ -21,12 +21,12 @@ public class EnemyArea : MonoBehaviour
 
     private void OnEnable()
     {
-        EnemyQTEManager.OnQTEFinished += OnQTEFinished;
+        EnemyQTEManager.OnQteFinished += OnQTEFinished;
     }
 
     private void OnDisable()
     {
-        EnemyQTEManager.OnQTEFinished -= OnQTEFinished;
+        EnemyQTEManager.OnQteFinished -= OnQTEFinished;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -39,6 +39,8 @@ public class EnemyArea : MonoBehaviour
 
         triggered = true;
 
+        other.GetComponentInParent<PlayerDetectionSystem>()?.SetInGap(true);
+        
         OnPlayerDetected?.Invoke(this);
     }
 
@@ -49,6 +51,9 @@ public class EnemyArea : MonoBehaviour
             return;
 
         triggered = false;
+        
+        other.GetComponentInParent<PlayerDetectionSystem>()?.SetInGap(false);
+        
         OnPlayerLeftArea?.Invoke();
     }
 
@@ -71,7 +76,7 @@ public class EnemyArea : MonoBehaviour
 
         if (!success)
         {
-            // Aqui chama o Game Over
+            UIManagerPause.Instance.GameOver();
         }
     }
 

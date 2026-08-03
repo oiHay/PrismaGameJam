@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c729aa8e69de2974f887f1458d1f59ba, type: 3}
-  m_Name: Pegadas
+  m_Name: Rastro
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Marcas de pegadas
-  icon: {fileID: 0}
+  icon: {fileID: -8081191230483149863, guid: 0f090060c975713459481467acc95259, type: 3}
   description: 

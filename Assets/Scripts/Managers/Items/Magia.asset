@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Magia
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Rastro de magia
-  icon: {fileID: 0}
+  icon: {fileID: -6394308000950324249, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "Resqu\xEDcio fraco de part\xEDculas e aura m\xE1gica, sentidos ao
     redor de toda a cena do crime."

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dentes
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Dentes
-  icon: {fileID: 0}
+  icon: {fileID: 5025022345599192821, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "V\xE1rios dentes de diferentes formatos, todos pontiagudos. Espalhados
     pelo ch\xE3o do local do desaparecimento"

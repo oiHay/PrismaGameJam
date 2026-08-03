@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chifre
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: "Peda\xE7o de chifre"
-  icon: {fileID: 0}
+  icon: {fileID: 2458457280762482481, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "Peda\xE7o quebrado de um chifre escuro. Encontrado no ch\xE3o da
     cena do crime."

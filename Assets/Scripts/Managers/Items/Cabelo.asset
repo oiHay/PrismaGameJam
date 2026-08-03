@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cabelo
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Tufo de cabelo
-  icon: {fileID: 0}
+  icon: {fileID: -2317600020098768487, guid: 0f090060c975713459481467acc95259, type: 3}
   description: "Tufo da mesma cor que o cabelo da v\xEDtima. Foi encontrado pr\xF3ximo
     ao rastro em dire\xE7\xE3o \xE0 mata."
