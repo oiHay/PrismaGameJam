@@ -22,6 +22,7 @@ public class PlayerInteractionControl : MonoBehaviour
     [SerializeField] private KeyCode interactionButton = KeyCode.E;
     
     private bool _isClueOnRange;
+    private bool _isDoorOnRange;
 
     public event Action<bool> OnPistaRangeChanged;
     
@@ -32,6 +33,14 @@ public class PlayerInteractionControl : MonoBehaviour
             DebugMessage("pista dentro do range");
 
             _isClueOnRange = true;
+            OnPistaRangeChanged?.Invoke(true);
+        }
+
+        if (other.CompareTag("Door"))
+        {
+            DebugMessage("porta dentro do range");
+            
+            _isDoorOnRange = true;
             OnPistaRangeChanged?.Invoke(true);
         }
     }
@@ -46,6 +55,14 @@ public class PlayerInteractionControl : MonoBehaviour
             //PlayerInventory.Instance.AddItem(other);
             AudioManager.Instance.PlaySfx(findCLue);
         }
+        
+        if (Input.GetKeyDown(interactionButton) && _isDoorOnRange)
+        {
+            DebugMessage("Player abrindo a porta");
+            
+            CustomSceneManager.GoToAssembleia();
+            
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -55,6 +72,14 @@ public class PlayerInteractionControl : MonoBehaviour
             DebugMessage("pista saiu do range");
             
             _isClueOnRange = false;
+            OnPistaRangeChanged?.Invoke(false);
+        }
+        
+        if (other.CompareTag("Door"))
+        {
+            DebugMessage("porta saiu do range");
+            
+            _isDoorOnRange = false;
             OnPistaRangeChanged?.Invoke(false);
         }
     }

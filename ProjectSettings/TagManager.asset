@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pistas
   - EnemyDetect
+  - Door
   layers:
   - Default
   - TransparentFX

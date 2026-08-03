@@ -18,6 +18,7 @@ public class UIManagerPause : MonoBehaviour
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject exitConfirmationPanel;
     [SerializeField] private InventoryUI inventoryPanel;
+    [SerializeField] private GameObject gameoverPanel;
 
     [Header("Audio")]
     [SerializeField] private AudioClip inventorySound;
@@ -75,5 +76,11 @@ public class UIManagerPause : MonoBehaviour
     public void TryQuit()
     {
         exitConfirmationPanel.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        GameManager.Instance.ChangeState(GameState.GameOver);
+        gameoverPanel.SetActive(true);
     }
 }
