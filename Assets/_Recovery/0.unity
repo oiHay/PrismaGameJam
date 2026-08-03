@@ -3806,7 +3806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneInitializer
   initialState: 1
-  sceneMusic: {fileID: 8300000, guid: 4f187642f6977954b8917e1d8807b516, type: 3}
+  sceneMusic: {fileID: 0}
 --- !u!1 &1280625537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,7 +4783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementControll
   detectionSystem: {fileID: 1686893393}
-  walkClip: {fileID: 8300000, guid: 70104e0a3e073b041868068f15aed9b1, type: 3}
+  walkClip: {fileID: 0}
   runClip: {fileID: 8300000, guid: 4ba0d135dcbac2149acae0d514b2a93d, type: 3}
   moveSpeed: 15
   sprintFactor: 10
@@ -5796,9 +5796,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 446477239202776419, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 446477239202776419, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 446477239202776419, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
+      propertyPath: masterSlider
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1958339864812494574, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
       propertyPath: m_Name
       value: Game Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358114234387657258, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
+      propertyPath: initialState
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7777735426787087410, guid: 3a50a5c59190f764a9b5fabe993ed399, type: 3}
       propertyPath: m_LocalPosition.x

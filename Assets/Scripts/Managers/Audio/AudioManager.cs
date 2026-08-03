@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     [Header("Sources")] 
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource movementSource;
 
     private const string MasterParam = "MasterVolume";
     private const string MusicParam  = "MusicVolume";
@@ -39,6 +40,9 @@ public class AudioManager : MonoBehaviour
         musicSource.loop = true;
 
         sfxSource.outputAudioMixerGroup = sfxGroup;
+        
+        movementSource.outputAudioMixerGroup = sfxGroup;
+        movementSource.loop = true;
     }
 
     private void Start()
@@ -48,7 +52,9 @@ public class AudioManager : MonoBehaviour
 
     private void LoadSavedVolume()
     {
-        
+        SetMasterVolume(PlayerPrefs.GetFloat(MasterKey, 1f));
+        SetMusicVolume(PlayerPrefs.GetFloat(MusicKey, 1f));
+        SetSfxVolume(PlayerPrefs.GetFloat(SfxKey, 1f));
     }
 
     public void SetMasterVolume(float value)
@@ -103,5 +109,25 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance != null)
             Instance.PlaySfx(clip);
+    }
+    
+    public void PlayLoopingSfx(AudioClip clip, float volumeScale = 1f)
+    {
+        if (clip == null) return;
+
+        // já está tocando esse clip? não reinicia
+        if (movementSource.clip == clip && movementSource.isPlaying) return;
+
+        movementSource.clip = clip;
+        movementSource.volume = volumeScale;
+        movementSource.Play();
+    }
+
+    public void StopLoopingSfx()
+    {
+        if (!movementSource.isPlaying) return;
+
+        movementSource.Stop();
+        movementSource.clip = null;
     }
 }

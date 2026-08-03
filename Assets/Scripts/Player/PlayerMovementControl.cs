@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerMovementControl : MonoBehaviour
 {
-   [Header("References")] [SerializeField]
-   private PlayerDetectionSystem detectionSystem;
+   [Header("References")] 
+   [SerializeField] private PlayerDetectionSystem detectionSystem;
+
+   [Header("Audio")] 
+   [SerializeField] private AudioClip walkClip;
+   [SerializeField] private AudioClip runClip;
    
    [Header("Move Speed")]
    [SerializeField] private float moveSpeed;
@@ -39,6 +43,9 @@ public class PlayerMovementControl : MonoBehaviour
    public void SetGameState(GameState state)
    { 
       _isGameActive = state == GameState.Play;
+
+      if (!_isGameActive)
+         AudioManager.Instance?.StopLoopingSfx();
    }
 
    public void SetHidden(bool hidden)
@@ -50,6 +57,7 @@ public class PlayerMovementControl : MonoBehaviour
          _horizontalInput = 0f;
          moveDir = Vector2.zero;
          _playerRb.linearVelocity = Vector2.zero;
+         AudioManager.Instance?.StopLoopingSfx();
       }
    }
 
@@ -71,17 +79,33 @@ public class PlayerMovementControl : MonoBehaviour
 
    private void UpdateDetectionMovementState()
    {
-      if (detectionSystem ==  null) return;
-
       bool isMoving = Mathf.Abs(_horizontalInput) > 0.01f;
       bool wantsRun = Input.GetKey(KeyCode.LeftShift) && _currentStamina > 0f;
 
-      if (isMoving && wantsRun)
-         detectionSystem.Movement = MovementState.Running;
-      else if (isMoving)
-         detectionSystem.Movement = MovementState.Walking;
-      else
-         detectionSystem.Movement = MovementState.Idle;
+      if (detectionSystem != null)
+      {
+         if (isMoving && wantsRun)
+            detectionSystem.Movement = MovementState.Running;
+         else if (isMoving)
+            detectionSystem.Movement = MovementState.Walking;
+         else
+            detectionSystem.Movement = MovementState.Idle;
+      }
+
+      UpdateMovementAudio(isMoving, wantsRun);
+   }
+
+   private void UpdateMovementAudio(bool isMoving, bool wantsRun)
+   {
+      if (AudioManager.Instance == null) return;
+
+      if (!isMoving)
+      {
+         AudioManager.Instance.StopLoopingSfx();
+         return;
+      }
+
+      AudioManager.Instance.PlayLoopingSfx(wantsRun ? runClip : walkClip);
    }
 
    private void HandleMoveInput(float horizontalInput)
