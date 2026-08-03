@@ -29,6 +29,11 @@ public class InventoryUI : MonoBehaviour
         PopulateList();
     }
 
+    public void OpenWithoutDialogue()
+    {
+        Open();
+    }
+
     void PopulateList()
     {
         foreach (Transform child in itemsListContainer)
@@ -40,14 +45,16 @@ public class InventoryUI : MonoBehaviour
         {
             Button slot = Instantiate(itemSlotPrefab, itemsListContainer);
             slot.gameObject.SetActive(true);
-            slot.GetComponentInChildren<Image>().sprite = item.icon;
+            
+            ItemSlot slotScript = slot.GetComponent<ItemSlot>();
+            slotScript.iconImage.sprite = item.icon;
 
             ItemSO captured = item;
             slot.onClick.AddListener(() => SelectItem(captured));
         }
 
         if (items.Count > 0)
-            SelectItem(items[0]); // default: primeiro item da lista
+            SelectItem(items[0]);
         else
             ClearSelection();
     }

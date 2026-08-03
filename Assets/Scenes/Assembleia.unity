@@ -354,6 +354,7 @@ RectTransform:
   - {fileID: 1312035011}
   - {fileID: 985211246}
   - {fileID: 2078854819}
+  - {fileID: 509178908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -444,13 +445,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1749989265}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ReturnToSuspects
-        m_Mode: 1
+      - m_Target: {fileID: 509178909}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1749989265}
+          m_ObjectArgumentAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -494,6 +495,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375125452}
   m_CullTransparentMesh: 1
+--- !u!1001 &509178907
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 82683357}
+    m_Modifications:
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.549591
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13804626
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999411289685122714, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_Name
+      value: Panel - Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999411289685122714, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 509178909}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPresentClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072182958681166018, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+--- !u!4 &509178908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 321494531791597063, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+  m_PrefabInstance: {fileID: 509178907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &509178909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2727699192088314713, guid: 63b1eb9b108638c439c69c54c07c57b0, type: 3}
+  m_PrefabInstance: {fileID: 509178907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8682ba1eeba32e34e851eefa30c400db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
 --- !u!1 &602743755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1402,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601929128}
   m_CullTransparentMesh: 1
+--- !u!1 &1647690215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647690217}
+  - component: {fileID: 1647690216}
+  m_Layer: 0
+  m_Name: PlayerInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1647690216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647690215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6786792858d340248ad759a143c18b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  collectedItems:
+  - {fileID: 11400000, guid: 8de81569967cc264e888f83e06e90d6d, type: 2}
+  - {fileID: 11400000, guid: dc215b0e03f85284793ae41523a5e9cd, type: 2}
+  - {fileID: 11400000, guid: a87b8d2f002213044b40f2839ece4d76, type: 2}
+  - {fileID: 11400000, guid: cb23aa0728c9e274c938c407ea4facaa, type: 2}
+--- !u!4 &1647690217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647690215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 395.5496, y: 218.86195, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749989263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,3 +2511,4 @@ SceneRoots:
   - {fileID: 82683357}
   - {fileID: 1751463264}
   - {fileID: 1346853486}
+  - {fileID: 1647690217}

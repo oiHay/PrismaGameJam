@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c729aa8e69de2974f887f1458d1f59ba, type: 3}
   m_Name: Cigarro
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: 
+  itemName: Cigarro
   icon: {fileID: 0}
-  description: 
+  description: fumante fumante fumante fumante fumante fumante fumante fumante
