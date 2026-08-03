@@ -15,14 +15,12 @@ MonoBehaviour:
   suspectName: Cuca
   portraits:
   - emotion: 0
-    sprite: {fileID: 0}
+    sprite: {fileID: -6834894854141412693, guid: a80eb14e67754f042a38d3893f123310, type: 3}
   - emotion: 1
-    sprite: {fileID: 0}
+    sprite: {fileID: -7333071047808048592, guid: a80eb14e67754f042a38d3893f123310, type: 3}
   - emotion: 2
-    sprite: {fileID: 0}
-  dialogueOptions:
-  - {fileID: 11400000, guid: a3d6295c936b97a49979163822b8bc79, type: 2}
-  - {fileID: 11400000, guid: abf81dcf9ad6cc84ab006846221e1e94, type: 2}
+    sprite: {fileID: 3995153358316297226, guid: a80eb14e67754f042a38d3893f123310, type: 3}
+  dialogueOptions: []
   itemReactions:
   - item: {fileID: 11400000, guid: a87b8d2f002213044b40f2839ece4d76, type: 2}
     reactionDialogue: {fileID: 11400000, guid: 5a804dbd0f715304f9e626d99e389135, type: 2}

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Boi
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
   suspectName: Boi da Cara Preta
-  portraits: []
+  portraits:
+  - emotion: 0
+    sprite: {fileID: -3742851573268970870, guid: 498257bf4894ff544a11157508efed83, type: 3}
+  - emotion: 1
+    sprite: {fileID: 780156467449780472, guid: 498257bf4894ff544a11157508efed83, type: 3}
+  - emotion: 2
+    sprite: {fileID: 1126161025600370227, guid: 498257bf4894ff544a11157508efed83, type: 3}
   dialogueOptions: []
   itemReactions:
   - item: {fileID: 11400000, guid: 19fc5a623721b2d40bdec07fa5249114, type: 2}

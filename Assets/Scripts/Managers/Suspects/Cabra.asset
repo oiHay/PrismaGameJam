@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Cabra
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
   suspectName: Cabra Cabriola
-  portraits: []
+  portraits:
+  - emotion: 0
+    sprite: {fileID: -6282416047132691517, guid: c7d0d615aeff7ee479dac2334fc68a6c, type: 3}
+  - emotion: 1
+    sprite: {fileID: -3985599518725804624, guid: c7d0d615aeff7ee479dac2334fc68a6c, type: 3}
+  - emotion: 2
+    sprite: {fileID: 5876340409702937835, guid: c7d0d615aeff7ee479dac2334fc68a6c, type: 3}
   dialogueOptions: []
   itemReactions:
   - item: {fileID: 11400000, guid: 19fc5a623721b2d40bdec07fa5249114, type: 2}

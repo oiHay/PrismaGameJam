@@ -16,7 +16,7 @@ public class InventoryUI : MonoBehaviour
     public Button itemSlotPrefab;
 
     [Header("Apresentar")]
-    // public Button presentButton;
+    public Button presentButton;
 
     private ItemSO selectedItem;
     private DialogueManager dialogueManager; // null se não veio do diálogo
@@ -24,7 +24,8 @@ public class InventoryUI : MonoBehaviour
     public void Open(DialogueManager fromDialogue = null)
     {
         dialogueManager = fromDialogue;
-        // presentButton.gameObject.SetActive(dialogueManager != null);
+        presentButton.gameObject.SetActive(dialogueManager != null);
+        //presentButton.onClick.AddListener(() => OnPresentClicked());
 
         if(dialogueManager != null)
         {
@@ -83,6 +84,7 @@ public class InventoryUI : MonoBehaviour
 
     public void OnPresentClicked()
     {
+        
         if (selectedItem == null || dialogueManager == null) return;
 
         gameObject.SetActive(false);

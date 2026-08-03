@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Matinta
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
   suspectName: Matinta Pereira
-  portraits: []
+  portraits:
+  - emotion: 0
+    sprite: {fileID: 2704760495935686054, guid: 28a013ad628ae3746a2b79aee28c0dc3, type: 3}
+  - emotion: 1
+    sprite: {fileID: 739108353131679185, guid: 28a013ad628ae3746a2b79aee28c0dc3, type: 3}
+  - emotion: 2
+    sprite: {fileID: -7132308247043413336, guid: 28a013ad628ae3746a2b79aee28c0dc3, type: 3}
   dialogueOptions: []
   itemReactions: []
   genericItemDialogue: {fileID: 0}

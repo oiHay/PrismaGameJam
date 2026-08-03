@@ -13,7 +13,19 @@ MonoBehaviour:
   m_Name: Tutu
   m_EditorClassIdentifier: Assembly-CSharp::SuspectSO
   suspectName: "Tutu Maramb\xE1"
-  portraits: []
+  portraits:
+  - emotion: 0
+    sprite: {fileID: -4567483893202651572, guid: 4819b52f08da9734b9d73a5433175938, type: 3}
+  - emotion: 1
+    sprite: {fileID: 1915189221726235910, guid: 4819b52f08da9734b9d73a5433175938, type: 3}
+  - emotion: 2
+    sprite: {fileID: -4957235898696676936, guid: 4819b52f08da9734b9d73a5433175938, type: 3}
   dialogueOptions: []
-  itemReactions: []
+  itemReactions:
+  - item: {fileID: 11400000, guid: cb23aa0728c9e274c938c407ea4facaa, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 1c19d5f25c39a3249840440e16326287, type: 2}
+  - item: {fileID: 11400000, guid: 00529f8f87f19ae41aeffff6233d757c, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: 8a848e5e683ff3747be46b57a020f279, type: 2}
+  - item: {fileID: 11400000, guid: fe7bd8c1e15b6a84a8f719ebe0ddf855, type: 2}
+    reactionDialogue: {fileID: 11400000, guid: cf79ae38e9bc19742b76f891631b447d, type: 2}
   genericItemDialogue: {fileID: 0}
