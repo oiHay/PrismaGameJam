@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 0f090060c975713459481467acc95259
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2458457280762482481
+    second: itens_pistas_0
+  - first:
+      213: -2317600020098768487
+    second: itens_pistas_1
+  - first:
+      213: 5025022345599192821
+    second: itens_pistas_2
+  - first:
+      213: -1412937018682313857
+    second: itens_pistas_3
+  - first:
+      213: -1553849875758031771
+    second: itens_pistas_4
+  - first:
+      213: -8081191230483149863
+    second: itens_pistas_5
+  - first:
+      213: -6394308000950324249
+    second: itens_pistas_6
+  - first:
+      213: 7099143474140740365
+    second: itens_pistas_7
+  - first:
+      213: -1180727058494205010
+    second: itens_pistas_8
+  - first:
+      213: 7684240999288671466
+    second: itens_pistas_9
+  - first:
+      213: -3091620325400466689
+    second: itens_pistas_10
+  - first:
+      213: 4077497484646734558
+    second: itens_pistas_11
+  - first:
+      213: -4041121846258512272
+    second: itens_pistas_12
+  - first:
+      213: 7160332250095167693
+    second: itens_pistas_13
+  - first:
+      213: -4030258407312384737
+    second: itens_pistas_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: itens_pistas_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 19
+        width: 188
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f02531fd13e1220800000000000000
+      internalID: 2458457280762482481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_1
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 182
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99123969f0b36dfd0800000000000000
+      internalID: -2317600020098768487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_2
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 200
+        width: 31
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe07d913377cb540800000000000000
+      internalID: 5025022345599192821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_3
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 61
+        width: 259
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73f07f744d346ce0800000000000000
+      internalID: -1412937018682313857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_4
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 25
+        width: 202
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c582945cd9f6ae0800000000000000
+      internalID: -1553849875758031771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_5
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 204
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbcc015467d9df80800000000000000
+      internalID: -8081191230483149863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_6
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 93
+        width: 178
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3faea60cad247a0800000000000000
+      internalID: -6394308000950324249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_7
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 46
+        width: 172
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bf0b97069358260800000000000000
+      internalID: 7099143474140740365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_8
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 110
+        width: 326
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3d2cdfef63d9fe0800000000000000
+      internalID: -1180727058494205010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_9
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 13
+        width: 327
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec081bd978e3aa60800000000000000
+      internalID: 7684240999288671466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 110
+        width: 63
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaa024b1bb5815d0800000000000000
+      internalID: -3091620325400466689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_11
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 111
+        width: 51
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edadae8db5e269830800000000000000
+      internalID: 4077497484646734558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_12
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 139
+        width: 57
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ec0b3771d0be7c0800000000000000
+      internalID: -4041121846258512272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_13
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 46
+        width: 81
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc822b09e3c9e5360800000000000000
+      internalID: 7160332250095167693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itens_pistas_14
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 72
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d1d1fe455a118c0800000000000000
+      internalID: -4030258407312384737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cb0a85a91b5b3f04fa780be87cae462d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      itens_pistas_0: 2458457280762482481
+      itens_pistas_1: -2317600020098768487
+      itens_pistas_10: -3091620325400466689
+      itens_pistas_11: 4077497484646734558
+      itens_pistas_12: -4041121846258512272
+      itens_pistas_13: 7160332250095167693
+      itens_pistas_14: -4030258407312384737
+      itens_pistas_2: 5025022345599192821
+      itens_pistas_3: -1412937018682313857
+      itens_pistas_4: -1553849875758031771
+      itens_pistas_5: -8081191230483149863
+      itens_pistas_6: -6394308000950324249
+      itens_pistas_7: 7099143474140740365
+      itens_pistas_8: -1180727058494205010
+      itens_pistas_9: 7684240999288671466
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
