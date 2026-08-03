@@ -17,7 +17,10 @@ public class UIManagerPause : MonoBehaviour
     [Header("Panels")]
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject exitConfirmationPanel;
+    [SerializeField] private InventoryUI inventoryPanel;
 
+    private bool _isInventoryOpen;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -26,6 +29,20 @@ public class UIManagerPause : MonoBehaviour
                 Resume();
             else
                 Pause();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!_isInventoryOpen)
+            {
+                inventoryPanel.OpenWithoutDialogue();
+                _isInventoryOpen = true;
+            }
+            else
+            {
+                inventoryPanel.Close();
+                _isInventoryOpen = false;
+            }
         }
     }
 
