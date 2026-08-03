@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text speakerNameText;
     public TMP_Text dialogueText;
     public Image portraitImage;
+    public GameObject dialogueAdvance;
     public Button conversationClickArea; // botão invisível cobrindo a tela
 
     [Header("UI - Suspeitos")]
@@ -47,6 +48,7 @@ public class DialogueManager : MonoBehaviour
         suspectsParent.SetActive(false);
         conversationPanel.SetActive(false);
         optionsPanel.SetActive(true);
+        dialogueAdvance.SetActive(false);
 
         foreach (Transform child in optionButtonContainer)
             Destroy(child.gameObject);
@@ -103,6 +105,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        dialogueAdvance.SetActive(true);
     }
 
     void OnConversationClicked()
@@ -113,10 +116,12 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(typingCoroutine);
             dialogueText.text = currentOption.conversation[currentLineIndex].text;
             isTyping = false;
+            dialogueAdvance.SetActive(true);
         }
         else
         {
             AdvanceDialogue();
+            dialogueAdvance.SetActive(false);
         }
     }
 
