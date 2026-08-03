@@ -1590,7 +1590,7 @@ MonoBehaviour:
   pauseUI: {fileID: 1659948627}
   exitConfirmationPanel: {fileID: 1071224831}
   inventoryPanel: {fileID: 1942143908}
-  gameoverPanel: {fileID: 0}
+  gameoverPanel: {fileID: 958488450}
   inventorySound: {fileID: 8300000, guid: 591520db51fd2df49bb432d9fae4815d, type: 3}
   openPanel: {fileID: 8300000, guid: c4fef4a86abce6148bb1626e1c56ab62, type: 3}
   closePanel: {fileID: 8300000, guid: c5bfe3899f067f24e9ce6657cd723880, type: 3}
@@ -1814,6 +1814,7 @@ GameObject:
   - component: {fileID: 438057238}
   - component: {fileID: 438057240}
   - component: {fileID: 438057239}
+  - component: {fileID: 438057241}
   m_Layer: 0
   m_Name: Vrido
   m_TagString: Pistas
@@ -1830,7 +1831,7 @@ Transform:
   m_GameObject: {fileID: 438057237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 124.11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1931,6 +1932,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &438057241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438057237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: 19fc5a623721b2d40bdec07fa5249114, type: 2}
 --- !u!1 &442143589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3157,7 @@ GameObject:
   - component: {fileID: 665463676}
   - component: {fileID: 665463678}
   - component: {fileID: 665463677}
+  - component: {fileID: 665463679}
   m_Layer: 0
   m_Name: Cigarro
   m_TagString: Pistas
@@ -3159,7 +3174,7 @@ Transform:
   m_GameObject: {fileID: 665463675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 138.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3260,6 +3275,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &665463679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665463675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: a87b8d2f002213044b40f2839ece4d76, type: 2}
 --- !u!1 &669078306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,7 +3801,7 @@ Transform:
   m_GameObject: {fileID: 870623332}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008957916, y: 5.153109, z: -10}
+  m_LocalPosition: {x: 0.010457327, y: 5.153109, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6024,6 +6052,7 @@ GameObject:
   - component: {fileID: 1341687567}
   - component: {fileID: 1341687569}
   - component: {fileID: 1341687568}
+  - component: {fileID: 1341687570}
   m_Layer: 0
   m_Name: Dente
   m_TagString: Pistas
@@ -6040,7 +6069,7 @@ Transform:
   m_GameObject: {fileID: 1341687566}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 82.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6141,6 +6170,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1341687570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341687566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: cb23aa0728c9e274c938c407ea4facaa, type: 2}
 --- !u!1 &1361646134
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,6 +7240,7 @@ GameObject:
   - component: {fileID: 1586136501}
   - component: {fileID: 1586136500}
   - component: {fileID: 1586136499}
+  - component: {fileID: 1586136502}
   m_Layer: 0
   m_Name: Chifre
   m_TagString: Pistas
@@ -7309,12 +7352,25 @@ Transform:
   m_GameObject: {fileID: 1586136498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 19.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 500584201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1586136502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586136498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: dc215b0e03f85284793ae41523a5e9cd, type: 2}
 --- !u!1 &1587436905
 GameObject:
   m_ObjectHideFlags: 0
@@ -7326,6 +7382,7 @@ GameObject:
   - component: {fileID: 1587436906}
   - component: {fileID: 1587436908}
   - component: {fileID: 1587436907}
+  - component: {fileID: 1587436909}
   m_Layer: 0
   m_Name: Rastro
   m_TagString: Pistas
@@ -7342,7 +7399,7 @@ Transform:
   m_GameObject: {fileID: 1587436905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 71, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7443,6 +7500,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1587436909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587436905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: fe7bd8c1e15b6a84a8f719ebe0ddf855, type: 2}
 --- !u!1 &1596018043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4918527262065776072, guid: 8ed47b31ade915342af16d0946309dc1, type: 3}
@@ -7530,6 +7600,7 @@ GameObject:
   - component: {fileID: 1663172238}
   - component: {fileID: 1663172240}
   - component: {fileID: 1663172239}
+  - component: {fileID: 1663172241}
   m_Layer: 0
   m_Name: Cabelo
   m_TagString: Pistas
@@ -7546,7 +7617,7 @@ Transform:
   m_GameObject: {fileID: 1663172237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 33.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7647,6 +7718,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1663172241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663172237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: 8de81569967cc264e888f83e06e90d6d, type: 2}
 --- !u!1 &1686893383
 GameObject:
   m_ObjectHideFlags: 0
@@ -8010,6 +8094,7 @@ GameObject:
   - component: {fileID: 1817652437}
   - component: {fileID: 1817652439}
   - component: {fileID: 1817652438}
+  - component: {fileID: 1817652440}
   m_Layer: 0
   m_Name: Magia
   m_TagString: Pistas
@@ -8026,7 +8111,7 @@ Transform:
   m_GameObject: {fileID: 1817652436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0, z: 0}
+  m_LocalPosition: {x: 140.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8127,6 +8212,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1817652440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817652436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fb52a80cbac4e4b9c9e8677cfc6759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleItem
+  item: {fileID: 11400000, guid: 00529f8f87f19ae41aeffff6233d757c, type: 2}
 --- !u!1 &1821721584
 GameObject:
   m_ObjectHideFlags: 0

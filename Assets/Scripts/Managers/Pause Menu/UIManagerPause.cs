@@ -57,12 +57,14 @@ public class UIManagerPause : MonoBehaviour
                 inventoryPanel.OpenWithoutDialogue();
                 _isInventoryOpen = true;
                 AudioManager.PlaySound(inventorySound);
+                GameManager.Instance.ChangeState(GameState.Pause);
             }
             else
             {
                 inventoryPanel.Close();
                 _isInventoryOpen = false;
                 AudioManager.PlaySound(inventorySound);
+                GameManager.Instance.ChangeState(GameState.Play);
             }
         }
     }

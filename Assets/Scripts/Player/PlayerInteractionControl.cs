@@ -21,7 +21,7 @@ public class PlayerInteractionControl : MonoBehaviour
     [Header("Input")]
     [SerializeField] private KeyCode interactionButton = KeyCode.E;
     
-    private bool _isClueOnRange;
+    private CollectibleItem _clueInRange;
     private bool _isDoorOnRange;
 
     public event Action<bool> OnPistaRangeChanged;
@@ -32,14 +32,14 @@ public class PlayerInteractionControl : MonoBehaviour
         {
             DebugMessage("pista dentro do range");
 
-            _isClueOnRange = true;
+            _clueInRange = other.GetComponent<CollectibleItem>();
             OnPistaRangeChanged?.Invoke(true);
         }
 
         if (other.CompareTag("Door"))
         {
             DebugMessage("porta dentro do range");
-            
+
             _isDoorOnRange = true;
             OnPistaRangeChanged?.Invoke(true);
         }
@@ -47,21 +47,22 @@ public class PlayerInteractionControl : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(interactionButton) && _isClueOnRange)
+        if (Input.GetKeyDown(interactionButton) && _clueInRange != null)
         {
             DebugMessage("Pista maneira");
-            
-            //Precisamos passar um ItemSO nesse AddItem.
-            //PlayerInventory.Instance.AddItem(other);
+
+            PlayerInventory.Instance.AddItem(_clueInRange.Item);
             AudioManager.Instance.PlaySfx(findCLue);
+
+            Destroy(_clueInRange.gameObject);
+            _clueInRange = null;
         }
-        
+
         if (Input.GetKeyDown(interactionButton) && _isDoorOnRange)
         {
             DebugMessage("Player abrindo a porta");
-            
+
             CustomSceneManager.GoToAssembleia();
-            
         }
     }
 
@@ -70,15 +71,15 @@ public class PlayerInteractionControl : MonoBehaviour
         if (other.CompareTag("Pistas"))
         {
             DebugMessage("pista saiu do range");
-            
-            _isClueOnRange = false;
+
+            _clueInRange = null;
             OnPistaRangeChanged?.Invoke(false);
         }
-        
+
         if (other.CompareTag("Door"))
         {
             DebugMessage("porta saiu do range");
-            
+
             _isDoorOnRange = false;
             OnPistaRangeChanged?.Invoke(false);
         }
