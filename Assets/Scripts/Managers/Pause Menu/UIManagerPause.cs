@@ -19,6 +19,11 @@ public class UIManagerPause : MonoBehaviour
     [SerializeField] private GameObject exitConfirmationPanel;
     [SerializeField] private InventoryUI inventoryPanel;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip inventorySound;
+    [SerializeField] private AudioClip openPanel;
+    [SerializeField] private AudioClip closePanel;
+
     private bool _isInventoryOpen;
     
     private void Update()
@@ -37,11 +42,13 @@ public class UIManagerPause : MonoBehaviour
             {
                 inventoryPanel.OpenWithoutDialogue();
                 _isInventoryOpen = true;
+                AudioManager.PlaySound(inventorySound);
             }
             else
             {
                 inventoryPanel.Close();
                 _isInventoryOpen = false;
+                AudioManager.PlaySound(inventorySound);
             }
         }
     }
@@ -52,6 +59,7 @@ public class UIManagerPause : MonoBehaviour
 
         CustomSceneManager.Pause();
         pauseUI.SetActive(true);
+        AudioManager.PlaySound(openPanel);
     }
 
     public void Resume()
@@ -61,6 +69,7 @@ public class UIManagerPause : MonoBehaviour
         CustomSceneManager.Resume();
         pauseUI.SetActive(false);
         exitConfirmationPanel.SetActive(false);
+        AudioManager.PlaySound(closePanel);
     }
 
     public void TryQuit()

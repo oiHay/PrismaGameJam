@@ -14,9 +14,13 @@ public class PlayerInteractionControl : MonoBehaviour
     }
 
     #endregion
-    
-    [SerializeField] private KeyCode interactionButton = KeyCode.E;
 
+    [Header("Audio")] 
+    [SerializeField] private AudioClip findCLue;
+    
+    [Header("Input")]
+    [SerializeField] private KeyCode interactionButton = KeyCode.E;
+    
     private bool _isClueOnRange;
 
     public event Action<bool> OnPistaRangeChanged;
@@ -36,9 +40,11 @@ public class PlayerInteractionControl : MonoBehaviour
     {
         if (Input.GetKeyDown(interactionButton) && _isClueOnRange)
         {
+            DebugMessage("Pista maneira");
+            
             //Precisamos passar um ItemSO nesse AddItem.
             //PlayerInventory.Instance.AddItem(other);
-            DebugMessage("Pista maneira");
+            AudioManager.Instance.PlaySfx(findCLue);
         }
     }
 
@@ -47,6 +53,7 @@ public class PlayerInteractionControl : MonoBehaviour
         if (other.CompareTag("Pistas"))
         {
             DebugMessage("pista saiu do range");
+            
             _isClueOnRange = false;
             OnPistaRangeChanged?.Invoke(false);
         }
