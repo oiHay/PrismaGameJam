@@ -107,7 +107,6 @@ public class DialogueManager : MonoBehaviour
 
     void OnConversationClicked()
     {
-        Debug.Log("cliquei");
         if (isTyping)
         {
             // completa o texto na hora

@@ -25,6 +25,11 @@ public class InventoryUI : MonoBehaviour
         dialogueManager = fromDialogue;
         presentButton.gameObject.SetActive(dialogueManager != null);
 
+        if(dialogueManager != null)
+        {
+            dialogueManager.optionsPanel.SetActive(false);
+        }
+
         gameObject.SetActive(true);
         PopulateList();
     }
@@ -79,12 +84,19 @@ public class InventoryUI : MonoBehaviour
     {
         if (selectedItem == null || dialogueManager == null) return;
 
-        Close();
+        gameObject.SetActive(false);
         dialogueManager.PresentItem(selectedItem);
     }
 
     public void Close()
     {
         gameObject.SetActive(false);
+
+        if(dialogueManager != null)
+        {
+            dialogueManager.optionsPanel.SetActive(true);
+            dialogueManager = null;
+        }
+        
     }
 }
